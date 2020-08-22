@@ -8,6 +8,7 @@ enum MapType {
   google,
   amap,
   baidu,
+  tencent,
   waze,
   yandexMaps,
   yandexNavi,

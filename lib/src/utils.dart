@@ -61,6 +61,21 @@ class Utils {
     }
   }
 
+  static String getTencentDirectionsMode(DirectionsMode directionsMode) {
+    switch (directionsMode) {
+      case DirectionsMode.driving:
+        return 'drive';
+      case DirectionsMode.transit:
+        return 'bus';
+      case DirectionsMode.walking:
+        return 'walk';
+      case DirectionsMode.bicycling:
+        return 'bike';
+      default:
+        return 'drive';
+    }
+  }
+
   static String getMapsMeDirectionsMode(DirectionsMode directionsMode) {
     switch (directionsMode) {
       case DirectionsMode.driving:

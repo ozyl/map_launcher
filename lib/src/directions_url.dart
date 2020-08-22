@@ -81,6 +81,19 @@ String getMapDirectionsUrl({
         },
       );
 
+    case MapType.tencent:
+      return Utils.buildUrl(
+        url: 'qqmap://map/routeplan',
+        queryParams: {
+          'from':originTitle,
+          'fromCoord':"${origin?.latitude},${origin?.longitude}",
+          'to':destinationTitle,
+          "tocoord":"${destination.latitude},${destination.longitude}",
+          'referer': 'map_launcher',
+          'type':Utils.getTencentDirectionsMode(directionsMode)
+        },
+      );
+
     case MapType.citymapper:
       return Utils.buildUrl(url: 'citymapper://directions', queryParams: {
         'endcoord': '${destination.latitude},${destination.longitude}',
